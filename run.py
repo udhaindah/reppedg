@@ -57,7 +57,7 @@ def get_next_proxy():
 for wallet_address in wallet_list:
     referral_code = random.choice(referral_codes)
     print(Fore.LIGHTCYAN_EX + f"Using random referral code: {referral_code}")
-    url = f"https://referral.layeredge.io/api/referral/register-wallet/{referral_code}"
+    url = f"https://referralapi.layeredge.io/api/referral/register-wallet/{referral_code}"
     payload = json.dumps({"walletAddress": wallet_address})
     proxies = get_next_proxy()
     try:
